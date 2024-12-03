@@ -42,17 +42,17 @@ function FormContents({
             <KdFormField
               name="email"
               label="Email"
-              renderField={KdInputField("email", "hello@email.com")}
+              render={KdInputField("email", "hello@email.com")}
             />
             <KdFormField
               name="password"
               label="Password"
-              renderField={KdInputField("password", "")}
+              render={KdInputField("password", "")}
             />
             <KdFormField
               name="password_confirm"
               label="Confirm Password"
-              renderField={KdInputField("password", "")}
+              render={KdInputField("password", "")}
             />
             <KdSubmitButton>Sign Up</KdSubmitButton>
           </>

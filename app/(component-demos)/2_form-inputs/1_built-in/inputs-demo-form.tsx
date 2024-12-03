@@ -45,7 +45,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"text"}
           label={"Text Field"}
-          renderField={KdInputField("text", "")}
+          render={KdInputField("text", "")}
         />
         <div className="f8w-font-mono f8w-pl-8">
           Value: {renderProps.form.watch("text") ?? "< not set >"}
@@ -55,7 +55,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"date"}
           label={"Date Field"}
-          renderField={KdInputField("date", new Date().toDateString())}
+          render={KdInputField("date", new Date().toDateString())}
         />
         <div className="f8w-font-mono f8w-pl-8">
           Value: {renderProps.form.watch("date") ?? "< not set >"}
@@ -65,7 +65,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"select"}
           label={"Select Field"}
-          renderField={KdSelectField(
+          render={KdSelectField(
             {
               cats: "Cats",
               dogs: "Dogs",
@@ -82,7 +82,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"radio"}
           label={"Radio Group"}
-          renderField={KdRadioGroup({
+          render={KdRadioGroup({
             cats: "Cats",
             dogs: "Dogs",
             birds: "Birds",
@@ -96,7 +96,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"booleanRadio"}
           label={"Boolean Radio Group"}
-          renderField={KdBooleanRadioGroup("Yes!", "No!")}
+          render={KdBooleanRadioGroup("Yes!", "No!")}
         />
         <div className="f8w-font-mono f8w-pl-8">
           {renderProps.form.watch("booleanRadio") != undefined
@@ -108,7 +108,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"checkbox"}
           label={"CheckBox"}
-          renderField={KdCheckBox("I want a cat please")}
+          render={KdCheckBox("I want a cat please")}
         />
         <div className="f8w-font-mono f8w-pl-8">
           Value:{" "}
@@ -121,7 +121,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"checkboxGroup"}
           label={"CheckBox Group"}
-          renderField={KdCheckBoxGroup({
+          render={KdCheckBoxGroup({
             cats: "Cats",
             dogs: "Dogs",
             birds: "Birds",
@@ -137,7 +137,7 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
         <KdFormField
           name={"textArray"}
           label={"Input Array"}
-          renderField={KdTextArray("Enter new item")}
+          render={KdTextArray("Enter new item")}
         />
         <div className="f8w-font-mono f8w-pl-8">
           {JSON.stringify(renderProps.form.watch("textArray")) ?? "< not set >"}

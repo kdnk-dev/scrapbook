@@ -35,17 +35,17 @@ function FormContents({ startEdit }: KRenderProps<FruitFormT>) {
       <KdFormField
         name={"type_of_fruit"}
         label={"Type of Fruit"}
-        renderField={KdInputField("text", "Banana")}
+        render={KdInputField("text", "Banana")}
       />
       <KdFormField
         name={"country_of_origin"}
         label={"Country of Origin"}
-        renderField={KdInputField("text", "Taiwan")}
+        render={KdInputField("text", "Taiwan")}
       />
       <KdFormField
         name={"count"}
         label={"Count"}
-        renderField={KdInputField("number", "100")}
+        render={KdInputField("number", "100")}
       />
       <KdEditableViewModeOnly>
         <Button className={"f8w-w-24"} onClick={() => startEdit()}>

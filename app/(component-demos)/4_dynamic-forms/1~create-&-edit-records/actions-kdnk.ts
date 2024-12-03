@@ -4,7 +4,7 @@ import {
   dynamicFormUpsertAction,
   fetchMultiple,
   fetchSingle,
-} from "@kdnk.dev/form-actions";
+} from "@kdnk.dev/forms/server";
 import { createClient } from "@/lib/supabaseClient-server";
 import { Database } from "@/lib/database";
 import { revalidatePath } from "next/cache";

@@ -41,12 +41,12 @@ function FormContents({
             <KdFormField
               name="password"
               label="New Password"
-              renderField={KdInputField("password", "")}
+              render={KdInputField("password", "")}
             />
             <KdFormField
               name="password_confirm"
               label="Confirm New Password"
-              renderField={KdInputField("password", "")}
+              render={KdInputField("password", "")}
             />
             <KdSubmitButton>Set Password</KdSubmitButton>
           </>

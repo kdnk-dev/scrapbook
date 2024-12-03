@@ -15,7 +15,7 @@ export default function Page() {
           Form with imperative validate / submit action
         </p>
         <Separator />
-        <ImperativeActionForm ref={formRef} />
+        <ImperativeActionForm handle={formRef} />
         <div className={"f8w-space-x-8"}>
           <Button onClick={() => formRef.current?.validate()}>
             Imperative Validate

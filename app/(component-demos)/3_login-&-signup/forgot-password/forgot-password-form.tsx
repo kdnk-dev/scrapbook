@@ -40,7 +40,7 @@ function FormContents() {
             <KdFormField
               name="email"
               label="Your Email Address"
-              renderField={KdInputField("email", "me@email.com")}
+              render={KdInputField("email", "me@email.com")}
             />
             <KdSubmitButton>Reset Password</KdSubmitButton>
           </>

@@ -6,8 +6,6 @@ import {
   KFormProps,
   useFormGroup,
 } from "@kdnk.dev/forms";
-import { dynamicFormActionWrapper } from "@kdnk.dev/form-actions";
-import { Database } from "@/lib/database";
 import React, { useMemo } from "react";
 import { formConfig } from "@/app/(component-demos)/4_dynamic-forms/dynamic-array/form-schema";
 import { dynamicFormUpsertActionProxy } from "@/app/(component-demos)/4_dynamic-forms/dynamic-array/actions";
@@ -20,10 +18,8 @@ export function AnimalDynamicFormArray(props: {
   // Can't re-use the Form object because the context is not properly propagated and is passed manually instead.
   const { DynamicFormArray } = useMemo(
     () =>
-      kdnkDynamicFormArray(formConfig).withSubmitAction(
-        dynamicFormActionWrapper<Database>(formConfig).forAction(
-          dynamicFormUpsertActionProxy,
-        ),
+      kdnkDynamicFormArray(formConfig).withSubmitAction((formData) =>
+        dynamicFormUpsertActionProxy("animals", "entry_id", formData),
       ),
     [],
   );
