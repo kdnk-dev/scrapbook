@@ -36,12 +36,12 @@ function FormContents(renderProps: KRenderProps<SimpleFormT>) {
       <KdFormField
         name={"name"}
         label={"Your Name"}
-        renderField={KdInputField("text", "Adam Smith")}
+        render={KdInputField("text", "Adam Smith")}
       />
       <KdFormField
         name={"email"}
         label={"Your Email"}
-        renderField={KdInputField("text", "adam@smith.com")}
+        render={KdInputField("text", "adam@smith.com")}
       />
       <KdSubmitButton>Submit</KdSubmitButton>
     </div>

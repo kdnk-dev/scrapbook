@@ -1,5 +1,5 @@
 import { KActionState, KdnkFormTypes, KFormData } from "@kdnk.dev/forms";
-import { dynamicFormUpsertAction, fetchMultiple } from "@kdnk.dev/form-actions";
+import { dynamicFormUpsertAction, fetchMultiple } from "@kdnk.dev/forms/server";
 import { createClient } from "@/lib/supabaseClient-server";
 import { Database } from "@/lib/database";
 import { revalidatePath } from "next/cache";

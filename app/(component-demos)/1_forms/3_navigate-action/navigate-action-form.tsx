@@ -28,7 +28,7 @@ function FormContents(renderProps: KRenderProps<SearchFormT>) {
       <KdFormField
         name={"username"}
         label={"Username to search for"}
-        renderField={KdInputField("text", "AdamSmith")}
+        render={KdInputField("text", "AdamSmith")}
       />
       <KdSubmitButton>Search</KdSubmitButton>
     </div>

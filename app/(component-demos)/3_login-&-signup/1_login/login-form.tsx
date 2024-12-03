@@ -34,12 +34,12 @@ function FormContents() {
         <KdFormField
           name="email"
           label="Email"
-          renderField={KdInputField("email", "hello@email.com")}
+          render={KdInputField("email", "hello@email.com")}
         />
         <KdFormField
           name="password"
           label="Password"
-          renderField={KdInputField("password", "")}
+          render={KdInputField("password", "")}
         />
         <KdSubmitButton>Login</KdSubmitButton>
       </CardContent>
